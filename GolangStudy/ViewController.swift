@@ -36,7 +36,7 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell")! as UITableViewCell
         var course:Course = courseSet[indexPath.row] as Course
-        cell.textLabel.text = course.getName()
+        cell.textLabel?.text = course.getName()
         cell.detailTextLabel?.text = course.getDesc()
         return cell
     }
@@ -58,4 +58,3 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     }
     
 }
-
